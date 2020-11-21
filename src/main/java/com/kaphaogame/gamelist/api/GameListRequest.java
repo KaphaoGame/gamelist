@@ -37,11 +37,12 @@ public class GameListRequest {
                 JSONObject gameResult = (JSONObject) gameResults.get(i);
                 String slug = (String) gameResult.get("slug");
                 String name = (String) gameResult.get("name");
+                String description = (String) gameResult.get("description");
                 String background_image_url = (String) gameResult.get("background_image");
                 Long metacriticScore = (Long) gameResult.get("metacritic");
                 Double rating = (Double) gameResult.get("rating");
                 if(metacriticScore != null){
-                    gameListModels.add(new GameListModel(name, slug, background_image_url, metacriticScore, rating));
+                    gameListModels.add(new GameListModel(name, description, slug, background_image_url, metacriticScore, rating));
                 }
             }
         } catch (IOException | ParseException e) {
