@@ -10,6 +10,7 @@ public class GameListModel {
 
     public GameListModel(String gameName, String gameDescription, String slug, String gameImageURL, Long metacriticScore, Double rating) {
         this.gameName = gameName;
+        this.gameDescription = gameDescription;
         this.slug = slug;
         this.gameImageURL = gameImageURL;
         this.metacriticScore = metacriticScore;
